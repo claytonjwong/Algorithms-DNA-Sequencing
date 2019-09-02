@@ -26,7 +26,7 @@ def phred33ToQ(qual):
     return ord(qual) - 33 # converts integer to character according to ASCII table
 ```
 
-### Assignment
+### Assignment 1
 In lecture and in a practical, we saw an implementation of the naive exact matching algorithm:
 ```python
 def naive(p, t):
@@ -85,3 +85,6 @@ If P and its reverse complement are identical (e.g. AACGTT), then a given match 
 Hint: See this notebook for a few examples you can use to test your naive_with_rc function.
 
 Next, download and parse the lambda virus genome, at: https://d28rh4a8wq0iu5.cloudfront.net/ads1/data/lambda_virus.fa
+
+### Solution 1
+* [1_notebook](1_notebook.ipynb)
