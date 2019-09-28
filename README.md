@@ -55,8 +55,10 @@
 * [Jupyter.org](https://jupyter.org/)
 
 ## Supplemental
+
 * Jupyter Notebooks can be executed from the command line:
-```shell script
+
+```
 $ jupyter notebook 1_notebook.ipynb
 [I 11:45:05.991 NotebookApp] The Jupyter Notebook is running at:
 [I 11:45:05.991 NotebookApp] http://localhost:8889/?token=070644d6de70204df12235b2356476b577d0744b5df41422
