@@ -53,6 +53,7 @@
 * [Lectures](https://github.com/BenLangmead/ads1-slides)
 * [Jupyter Notebooks](https://github.com/BenLangmead/ads1-notebooks)
 * [Jupyter.org](https://jupyter.org/)
+* [Fast Algorithms for Signal Processing](docs/Fast_Algorithms_for_Signal_Processing.pdf)
 
 ## Supplemental
 
