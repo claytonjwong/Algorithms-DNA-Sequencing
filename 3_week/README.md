@@ -183,7 +183,7 @@ def overlap(a, b, min_length=3):
 ```
 
 Say we are concerned only with overlaps that (a) are exact matches (no differences allowed),
-and (b) are at least \verb|k|k bases long. To make an overlap graph, we could call 
+and (b) are at least K bases long. To make an overlap graph, we could call 
 overlap(a,b,min_length=k) on every possible pair of reads from the dataset.
 Unfortunately, that will be very slow!
 
