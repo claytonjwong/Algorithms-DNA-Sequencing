@@ -1,4 +1,6 @@
 # Algorithms for DNA Sequencing
+* [Johns Hopkins University](https://www.jhu.edu/)
+![](docs/double_helix.png)
 
 ## [Week 1: DNA Sequencing, Strings and Matching](1_week)
 ### Lectures
@@ -47,6 +49,25 @@
 ### Resources
 * [bm_preproc.py](bm_preproc.py)
 * [k-mer_index.py](k-mer_index.py)
+* [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
+
+## [Week 3: Edit Distance, Assembly, and Overlaps](3_week)
+### Lectures
+1. [Edit Distance (part 1)](3_week/docs/edit_dist1.pdf)
+2. [Edit Distance (part 2)](3_week/docs/edit_dist2.pdf)
+3. [Edit Distance (part 3)](3_week/docs/edit_dist3.pdf)
+4. [Edit Distance (part 4)](3_week/docs/edit_dist4.pdf)
+5. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
+    * De Novo (starting from scratch)
+    * Shotgun (reads from all over the genome)
+6. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
+    * First rule of assembly
+        * If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
+    * Second rule of assembly
+        * More coverage leads to more and longer overlaps
+7. [Overlap Graph](3_week/docs/overlap_graph.pdf)
+
+### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
 
 ## External Resources
