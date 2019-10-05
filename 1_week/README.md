@@ -15,6 +15,10 @@
 11. [Read alignment and why it's hard](docs/read_alignment_hard.pdf)
 12. [Naive exact matching](docs/naive_exact_matching.pdf)
 
+### Resources
+* [ERR037900_1.first1000.fastq](1_week/ERR037900_1.first1000.fastq)
+* [lambda_virus.fa](1_week/lambda_virus.fa)
+
 ### Utility Functions
 ```python
 def QtoPhred33(Q):
@@ -82,9 +86,7 @@ First, implement a version of the naive exact matching algorithm that is strand-
 
 If P and its reverse complement are identical (e.g. AACGTT), then a given match offset should be reported only once. So if your new function is called naive_with_rc, then the old naive function and your new naive_with_rc function should return the same results when P equals its reverse complement.
 
-Hint: See this notebook for a few examples you can use to test your naive_with_rc function.
-
-Next, download and parse the lambda virus genome, at: https://d28rh4a8wq0iu5.cloudfront.net/ads1/data/lambda_virus.fa
+Next, download and parse the [lambda virus genome](lambda_virus.fa).
 
 ### Solution 1
 * [1_notebook](1_notebook.ipynb)

@@ -1,6 +1,6 @@
 # Algorithms for DNA Sequencing
-* [Johns Hopkins University](https://www.jhu.edu/)
 ![](docs/double_helix.png)
+* [Johns Hopkins University](https://www.jhu.edu/)
 
 ## [Week 1: DNA Sequencing, Strings and Matching](1_week)
 ### Lectures
@@ -20,7 +20,6 @@
 
 ### Notes and Assignments
 * [1_notebook.ipynb](1_week/1_notebook.ipynb)
-    * [.md](1_week/1_notebook.md)
     * [.html](1_week/1_notebook.html)
     
 ### Resources
@@ -43,7 +42,6 @@
 
 ### Notes and Assignments
 * [2_notebook.ipynb](2_week/2_notebook.ipynb) 
-    * [.md](2_week/2_notebook.md)
     * [.html](2_week/2_notebook.html)
     
 ### Resources
@@ -57,15 +55,38 @@
 2. [Edit Distance (part 2)](3_week/docs/edit_dist2.pdf)
 3. [Edit Distance (part 3)](3_week/docs/edit_dist3.pdf)
 4. [Edit Distance (part 4)](3_week/docs/edit_dist4.pdf)
-5. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
-    * De Novo (starting from scratch)
-    * Shotgun (reads from all over the genome)
-6. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
+    * Primary difference between edit distance and global alignment is the ability
+    to apply a weighted penalty to substitutions and indels (insertion/deletions)
+5. [Global and Local Alignment](3_week/docs/global_and_local_alignment.pdf)
+    * Human transition to transversion ratio (aka. ti/tv) is ~2.1
+        * purines
+            * adenine
+            * guanine
+        * pyrimidines
+            * cytosine
+            * thymine
+        * transitions occur for subsitutions in the same category
+            * *examples:*
+                * ```A -> G```
+                * ```C -> T```
+        * tranversions occur for subsitutions in different categories
+            * *examples:*
+                * ```A -> C```
+                * ```G -> T```
+    * Human substitution rate is ~1 in 1,000
+    * Small-gap rate is ~1 in 3,000
+        * aka. indels (insertion/deletions)
+6. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
+    * De Novo
+        * starting from scratch
+    * Shotgun
+        * reads from all over the genome
+7. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
     * First rule of assembly
         * If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
     * Second rule of assembly
         * More coverage leads to more and longer overlaps
-7. [Overlap Graph](3_week/docs/overlap_graph.pdf)
+8. [Overlap Graph](3_week/docs/overlap_graph.pdf)
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)

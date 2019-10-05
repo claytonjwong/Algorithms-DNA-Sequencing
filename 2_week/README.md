@@ -13,6 +13,11 @@
 10. [Approximate Matching, Hamming, and Edit Distance](docs/approximate.pdf)
 11. [Pigeonhole Principle](docs/pigeonhole.pdf)
 
+### Resources
+* [bm_preproc.py](bm_preproc.py)
+* [k-mer_index.py](k-mer_index.py)
+* [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
+
 ### Utility Functions
 ```python
 def read_FAST_A(filename):
@@ -25,8 +30,57 @@ def read_FAST_A(filename):
     return genome
 ```
 
+```python
+def readFAST_Q(filename):
+    sequences = []
+    qualities = []
+    with open(filename) as fh:
+        while True:
+            fh.readline()  # skip name line
+            seq = fh.readline().rstrip()  # read base sequence
+            fh.readline()  # skip placeholder line
+            qual = fh.readline().rstrip() # base quality line
+            if len(seq) == 0:
+                break
+            sequences.append(seq)
+            qualities.append(qual)
+    return sequences, qualities
+```
+
 ### Assignment 2
-Implement versions of the naive exact matching and Boyer-Moore algorithms *that additionally count and return (a) the number of character comparisons performed and (b) the number of alignments tried.* Roughly speaking, these measure how much work the two different algorithms are doing.
+In a practical, we saw Python code implementing the Boyer-Moore algorithm. Some of the code is for preprocessing the pattern P into the tables needed to execute the bad character and good suffix rules — we did not discuss that code. But we did discuss the code that performs the algorithm given those tables:
+```python
+def boyer_moore(p, p_bm, t):
+    """ Do Boyer-Moore matching. p=pattern, t=text,
+        p_bm=BoyerMoore object for p """
+    i = 0
+    occurrences = []
+    while i < len(t) - len(p) + 1:
+        shift = 1
+        mismatched = False
+        for j in range(len(p)-1, -1, -1):
+            if p[j] != t[i+j]:
+                skip_bc = p_bm.bad_character_rule(j, t[i+j])
+                skip_gs = p_bm.good_suffix_rule(j)
+                shift = max(shift, skip_bc, skip_gs)
+                mismatched = True
+                break
+        if not mismatched:
+            occurrences.append(i)
+            skip_gs = p_bm.match_skip()
+            shift = max(shift, skip_gs)
+        i += shift
+    return occurrences
+```
+
+**Measuring Boyer-Moore's benefit.** First, download the Python module for [Boyer-Moore preprocessing](bm_preproc.py)
+
+This module provides the BoyerMoore class, which encapsulates the preprocessing info used by the boyer_moore function above. Second, download the provided excerpt of [human chromosome 1](chr1.GRCh38.excerpt.fasta).
+
+Third, implement versions of the naive exact matching and Boyer-Moore algorithms *that additionally count and return (a) the number of character comparisons performed and (b) the number of alignments tried.* Roughly speaking, these measure how much work the two different algorithms are doing.
+
+### Solution 2
+* [2_notebook](2_notebook.ipynb)
 
 #### Naive
 ```python
@@ -75,6 +129,3 @@ def boyer_moore(p, p_bm, t):
         i += shift
     return occurrences, alignments, comparisons
 ```
-
-### Solution 2
-* [2_notebook](2_notebook.ipynb)
