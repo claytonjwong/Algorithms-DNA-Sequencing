@@ -1,4 +1,5 @@
 # Algorithms for DNA Sequencing
+## Week 3: Edit Distance, Assembly, and Overlaps
 ### Lectures
 1. [Edit Distance (part 1)](3_week/docs/edit_dist1.pdf)
 2. [Edit Distance (part 2)](3_week/docs/edit_dist2.pdf)
@@ -130,7 +131,7 @@ First, download the provided excerpt of [human chromosome 1](chr1.GRCh38.excerpt
 
 Second, parse it using the readGenome function we wrote before.
 
-Third, adapt the editDistance function we saw in practical (copied below) to answer questions 1 and 2 below.
+Third, adapt the editDistance function we saw in practical to answer questions 1 and 2 below.
 Your function should take arguments p (pattern), t (text) and should return the edit distance
 of the match between P and T with the fewest edits.
 
@@ -180,10 +181,15 @@ def editDistanceDP(A, B):
 def editDistanceDP(P, T):
     m, n = len(P), len(T)
     dp = [[0 for i in range(m+1)] for j in range(n+1)]
-    for i in range(m+1): dp[i][0] = i # only initialize the first column by distance from empty string
+    for i in range(m+1): dp[i][0] = i # init first column by distance from empty string
+
 #   the first row is all 0s unlike edit distance, since there is no bias toward alignment
-#   of P in T from the beginning of both P and T, ie. P can start at any index in T
-#   for j in range(n+1): dp[0][j] = j 
+#   of P in T from the beginning of both P and T, (ie. P can start at any index in T)
+
+#
+#   for j in range(n+1): dp[0][j] = j
+# 
+
     for i in range(1, m+1):
         for j in range(1, n+1):
             dp[i][j] = min(
