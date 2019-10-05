@@ -90,7 +90,7 @@ def editDistanceNaive(A, B):
 
 def editDistanceMemo(A, B):
     def go(A, B, i, j, memo={}):
-        key = str(i) + '#' + str(j)
+        key = str(i) + ',' + str(j)
         if memo.get(key): return memo[key]
         elif i == 0: memo[key] = j
         elif j == 0: memo[key] = i
@@ -134,48 +134,6 @@ Second, parse it using the readGenome function we wrote before.
 Third, adapt the editDistance function we saw in practical to answer questions 1 and 2 below.
 Your function should take arguments p (pattern), t (text) and should return the edit distance
 of the match between P and T with the fewest edits.
-
-```python
-def editDistanceNaive(A, B):
-    def go(A, B, i, j):
-        if i == 0: return j
-        if j == 0: return i
-        return min(
-            go(A, B, i-1, j-1) + int(A[i-1] != B[j-1]),
-            go(A, B, i, j-1) + 1,
-            go(A, B, i-1, j) + 1,
-        )
-    return go(A, B, len(A), len(B))
-
-def editDistanceMemo(A, B):
-    def go(A, B, i, j, memo={}):
-        key = str(i) + ',' + str(j)
-        if memo.get(key): return memo[key]
-        elif i == 0: memo[key] = j
-        elif j == 0: memo[key] = i
-        else:
-            memo[key] = min(
-                go(A, B, i-1, j-1, memo) + int(A[i-1] != B[j-1]),
-                go(A, B, i, j-1, memo) + 1,
-                go(A, B, i-1, j, memo) + 1,
-            )
-        return memo[key]
-    return go(A, B, len(A), len(B))
-
-def editDistanceDP(A, B):
-    m, n = len(A), len(B)
-    dp = [[0 for i in range(m+1)] for j in range(n+1)]
-    for i in range(m+1): dp[i][0] = i
-    for j in range(n+1): dp[0][j] = j
-    for i in range(1, m+1):
-        for j in range(1, n+1):
-            dp[i][j] = min(
-                dp[i-1][j-1] + int(A[i-1] != B[j-1]),
-                dp[i-1][j] + 1,
-                dp[i][j-1] + 1,
-            )
-    return dp[m][n]
-```
 
 ```python
 def editDistanceDP(P, T):
