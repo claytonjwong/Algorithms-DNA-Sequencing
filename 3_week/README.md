@@ -41,35 +41,6 @@
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
 
-### Utility Functions
-```python
-def read_FAST_A(filename):
-    genome = ''
-    with open(filename, 'r') as f:
-        for line in f:
-            # ignore header line with genome information
-            if not line[0] == '>':
-                genome += line.rstrip()
-    return genome
-```
-
-```python
-def readFAST_Q(filename):
-    sequences = []
-    qualities = []
-    with open(filename) as fh:
-        while True:
-            fh.readline()  # skip name line
-            seq = fh.readline().rstrip()  # read base sequence
-            fh.readline()  # skip placeholder line
-            qual = fh.readline().rstrip() # base quality line
-            if len(seq) == 0:
-                break
-            sequences.append(seq)
-            qualities.append(qual)
-    return sequences, qualities
-```
-
 ### Practicals
 I wrote this code de novo (ie. from scratch).  I feel this code is easier to read and understand
 than the lecture's implementation.  I also wrote a memo for the top-down solution to run efficiently

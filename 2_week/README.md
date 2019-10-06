@@ -18,35 +18,6 @@
 * [k-mer_index.py](k-mer_index.py)
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
 
-### Utility Functions
-```python
-def read_FAST_A(filename):
-    genome = ''
-    with open(filename, 'r') as f:
-        for line in f:
-            # ignore header line with genome information
-            if not line[0] == '>':
-                genome += line.rstrip()
-    return genome
-```
-
-```python
-def readFAST_Q(filename):
-    sequences = []
-    qualities = []
-    with open(filename) as fh:
-        while True:
-            fh.readline()  # skip name line
-            seq = fh.readline().rstrip()  # read base sequence
-            fh.readline()  # skip placeholder line
-            qual = fh.readline().rstrip() # base quality line
-            if len(seq) == 0:
-                break
-            sequences.append(seq)
-            qualities.append(qual)
-    return sequences, qualities
-```
-
 ### Assignment 2
 In a practical, we saw Python code implementing the Boyer-Moore algorithm. Some of the code is for preprocessing the pattern P into the tables needed to execute the bad character and good suffix rules — we did not discuss that code. But we did discuss the code that performs the algorithm given those tables:
 ```python
