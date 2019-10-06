@@ -303,4 +303,6 @@ print(len(set(pair[0] for pair in pairs))) # Q4: set of head with at least one o
 ```
 
 ### Solution 3
-* [3_notebook](3_notebook.ipynb) 
+* [.ipynb](3_assignment.ipynb)
+* [.py](3_assignment.py)
+* [.html](3_assignment.html)

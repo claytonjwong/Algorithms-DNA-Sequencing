@@ -89,4 +89,6 @@ If P and its reverse complement are identical (e.g. AACGTT), then a given match 
 Next, download and parse the [lambda virus genome](lambda_virus.fa).
 
 ### Solution 1
-* [1_notebook](1_notebook.ipynb)
+* [.ipynb](1_assignment.ipynb)
+* [.py](1_assignment.py)
+* [.html](1_assignment.html)

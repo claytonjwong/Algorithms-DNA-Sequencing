@@ -79,9 +79,6 @@ This module provides the BoyerMoore class, which encapsulates the preprocessing 
 
 Third, implement versions of the naive exact matching and Boyer-Moore algorithms *that additionally count and return (a) the number of character comparisons performed and (b) the number of alignments tried.* Roughly speaking, these measure how much work the two different algorithms are doing.
 
-### Solution 2
-* [2_notebook](2_notebook.ipynb)
-
 #### Naive
 ```python
 def naive(p, t):
@@ -129,3 +126,8 @@ def boyer_moore(p, p_bm, t):
         i += shift
     return occurrences, alignments, comparisons
 ```
+
+### Solution 2
+* [.ipynb](2_assignment.ipynb)
+* [.py](2_assignment.py)
+* [.html](2_assignment.html)
