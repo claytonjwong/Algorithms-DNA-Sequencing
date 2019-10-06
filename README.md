@@ -18,9 +18,11 @@
 11. [Read alignment and why it's hard](1_week/docs/read_alignment_hard.pdf)
 12. [Naive exact matching](1_week/docs/naive_exact_matching.pdf)
 
-### Notes and Assignments
-* [1_notebook.ipynb](1_week/1_notebook.ipynb)
-    * [.html](1_week/1_notebook.html)
+### Assignments
+* **1_assignment**
+    * [.ipynb](1_week/1_assignment.ipynb)
+    * [.py](1_week/1_assignment.py)
+    * [.html](1_week/1_assignment.html)
     
 ### Resources
 * [ERR037900_1.first1000.fastq](1_week/ERR037900_1.first1000.fastq)
@@ -40,9 +42,11 @@
 10. [Approximate Matching, Hamming, and Edit Distance](2_week/docs/approximate.pdf)
 11. [Pigeonhole Principle](2_week/docs/pigeonhole.pdf)
 
-### Notes and Assignments
-* [2_notebook.ipynb](2_week/2_notebook.ipynb) 
-    * [.html](2_week/2_notebook.html)
+### Assignments
+* **2_assignment**
+    * [.ipynb](2_week/2_assignment.ipynb)
+    * [.py](2_week/2_assignment.py)
+    * [.html](2_week/2_assignment.html)
     
 ### Resources
 * [bm_preproc.py](bm_preproc.py)
@@ -55,38 +59,16 @@
 2. [Edit Distance (part 2)](3_week/docs/edit_dist2.pdf)
 3. [Edit Distance (part 3)](3_week/docs/edit_dist3.pdf)
 4. [Edit Distance (part 4)](3_week/docs/edit_dist4.pdf)
-    * Primary difference between edit distance and global alignment is the ability
-    to apply a weighted penalty to substitutions and indels (insertion/deletions)
 5. [Global and Local Alignment](3_week/docs/global_and_local_alignment.pdf)
-    * Human transition to transversion ratio (aka. ti/tv) is ~2.1
-        * purines
-            * adenine
-            * guanine
-        * pyrimidines
-            * cytosine
-            * thymine
-        * transitions occur for subsitutions in the same category
-            * *examples:*
-                * ```A -> G```
-                * ```C -> T```
-        * tranversions occur for subsitutions in different categories
-            * *examples:*
-                * ```A -> C```
-                * ```G -> T```
-    * Human substitution rate is ~1 in 1,000
-    * Small-gap rate is ~1 in 3,000
-        * aka. indels (insertion/deletions)
 6. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
-    * De Novo
-        * starting from scratch
-    * Shotgun
-        * reads from all over the genome
 7. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
-    * First rule of assembly
-        * If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
-    * Second rule of assembly
-        * More coverage leads to more and longer overlaps
 8. [Overlap Graph](3_week/docs/overlap_graph.pdf)
+
+### Assignments
+* **3_assignment**
+    * [.ipynb](3_week/3_assignment.ipynb)
+    * [.py](3_week/3_assignment.py)
+    * [.html](3_week/3_assignment.html)
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
@@ -114,4 +96,11 @@ $ jupyter notebook 1_notebook.ipynb
     Or copy and paste one of these URLs:
         http://localhost:8889/?token=070644d6de70204df12235b2356476b577d0744b5df41422
      or http://127.0.0.1:8889/?token=070644d6de70204df12235b2356476b577d0744b5df41422
+```
+
+* The Python file for each Jupyter Notebook can be executed using ```ipython```.  If ```python``` is used
+to execute then the following error will occur:
+ 
+```
+NameError: name 'get_ipython' is not defined
 ```

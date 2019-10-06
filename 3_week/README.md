@@ -5,9 +5,37 @@
 2. [Edit Distance (part 2)](3_week/docs/edit_dist2.pdf)
 3. [Edit Distance (part 3)](3_week/docs/edit_dist3.pdf)
 4. [Edit Distance (part 4)](3_week/docs/edit_dist4.pdf)
+    * Primary difference between edit distance and global alignment is the ability
+    to apply a weighted penalty to substitutions and indels (insertion/deletions)
 5. [Global and Local Alignment](3_week/docs/global_and_local_alignment.pdf)
+    * Human transition to transversion ratio (aka. ti/tv) is ~2.1
+        * purines
+            * adenine
+            * guanine
+        * pyrimidines
+            * cytosine
+            * thymine
+        * transitions occur for subsitutions in the same category
+            * *examples:*
+                * ```A -> G```
+                * ```C -> T```
+        * tranversions occur for subsitutions in different categories
+            * *examples:*
+                * ```A -> C```
+                * ```G -> T```
+    * Human substitution rate is ~1 in 1,000
+    * Small-gap rate is ~1 in 3,000
+        * aka. indels (insertion/deletions)
 6. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
+    * De Novo
+        * starting from scratch
+    * Shotgun
+        * reads from all over the genome
 7. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
+    * First rule of assembly
+        * If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
+    * Second rule of assembly
+        * More coverage leads to more and longer overlaps
 8. [Overlap Graph](3_week/docs/overlap_graph.pdf)
 
 ### Resources
@@ -136,16 +164,16 @@ Your function should take arguments p (pattern), t (text) and should return the 
 of the match between P and T with the fewest edits.
 
 ```python
-def editDistanceDP(P, T):
+def editDistanceApproximate(P, T):
     m, n = len(P), len(T)
-    dp = [[0 for i in range(m+1)] for j in range(n+1)]
+    dp = [[0 for j in range(n+1)] for i in range(m+1)]
     for i in range(m+1): dp[i][0] = i # init first column by distance from empty string
 
 #   the first row is all 0s unlike edit distance, since there is no bias toward alignment
 #   of P in T from the beginning of both P and T, (ie. P can start at any index in T)
 
 #
-#   for j in range(n+1): dp[0][j] = j
+#   for j in range(n+1): dp[0][j] = j # DELETED!!!
 # 
 
     for i in range(1, m+1):
@@ -156,6 +184,18 @@ def editDistanceDP(P, T):
                 dp[i][j-1] + 1,
             )
     return min(dp[m]) # return the minimal value from the last row
+```
+
+* **Question 1:** What is the edit distance of the best match between pattern GCTGATCGATCGTACG
+and the excerpt of human chromosome 1? (Don't consider reverse complements.)
+
+* **Question 2:** What is the edit distance of the best match between pattern GATTTACCAGATTGAG
+and the excerpt of human chromosome 1? (Don't consider reverse complements.)
+
+```python
+T = read_FAST_A("chr1.GRCh38.excerpt.fasta")
+print(editDistanceDP("GCTGATCGATCGTACG", T))
+print(editDistanceDP("GATTTACCAGATTGAG", T))
 ```
 
 Hint: In the "A new solution to approximate matching" video we saw that the best approximate match
@@ -223,7 +263,44 @@ there is a problem somewhere.
 * Hint 2: Remember not to overlap a read with itself. If you do, your answers will be too high.
 * Hint 3: You can test your implementation by making up small examples, then checking that
 (a) your implementation runs quickly, and (b) you get the same answer as if you had simply called
-overlap(a,b,min_length=k) on every pair of reads.  We also have provided a couple examples you can check against.
+overlap(a,b,min_length=k) on every pair of reads.  We also have provided a couple
+[examples you can check against](https://nbviewer.jupyter.org/github/BenLangmead/ads1-hw-examples/blob/master/hw3_overlap_all.ipynb).
+
+```python
+def overlap_all_pairs(reads, k, map={}):
+    def get_kmers(read, k, kmers=set()):
+        for i in range(0, len(read)-k+1):
+            kmers.add(read[i:i+k])
+        return kmers
+    for read in reads:
+        kmers = get_kmers(read, k)
+        for kmer in kmers:
+            if not kmer in map.keys():
+                map[kmer] = set()
+            map[kmer].add(read)
+    pairs = []
+    for head in reads:
+        kmer = head[-k:]
+        candidates = map[kmer]
+        for tail in candidates:
+            if (not head == tail and overlap(head, tail, k)):
+                pairs.append((head, tail))
+    return pairs
+```
+
+* **Question 3:** Picture the overlap graph corresponding to the overlaps just calculated. How many edges are in the graph?
+In other words, how many distinct pairs of reads overlap?
+
+* **Question 4:** Picture the overlap graph corresponding to the overlaps computed for the previous question.
+How many nodes in this graph have at least one outgoing edge? (In other words, how many reads have a suffix
+involved in an overlap?)
+
+```python
+reads, _ = readFAST_Q('ERR266411_1.for_asm.fastq')
+pairs = overlap_all_pairs(reads, 30)
+print(len(pairs)) # Q3: edges in the graph
+print(len(set(pair[0] for pair in pairs))) # Q4: set of head with at least one outgoing edge to a tail
+```
 
 ### Solution 3
 * [3_notebook](3_notebook.ipynb) 
