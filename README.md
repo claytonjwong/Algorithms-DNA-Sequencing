@@ -1,6 +1,7 @@
 # Algorithms for DNA Sequencing
 ![](docs/double_helix.png)
 * [Johns Hopkins University](https://www.jhu.edu/)
+* [langmead-lab.org](http://www.langmead-lab.org/)
 
 ## [Week 1: DNA Sequencing, Strings and Matching](1_week)
 ### Lectures
