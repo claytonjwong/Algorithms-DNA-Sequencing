@@ -276,4 +276,3 @@ print(len(set(pair[0] for pair in pairs))) # Q4: set of head with at least one o
 ### Solution 3
 * [.ipynb](3_assignment.ipynb)
 * [.py](3_assignment.py)
-* [.md](3_assignment.md)

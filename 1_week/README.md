@@ -64,4 +64,3 @@ Next, download and parse the [lambda virus genome](lambda_virus.fa).
 ### Solution 1
 * [.ipynb](1_assignment.ipynb)
 * [.py](1_assignment.py)
-* [.md](1_assignment.md)
