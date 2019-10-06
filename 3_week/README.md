@@ -40,6 +40,7 @@
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
+* [ERR266411_1.for_asm.fastq](ERR266411_1.for_asm.fastq)
 
 ### Practicals
 I wrote this code de novo (ie. from scratch).  I feel this code is easier to read and understand
