@@ -14,7 +14,6 @@
 8. [Sequencing errors and base qualities](1_week/docs/seq_errors_base_qualities.pdf)
 9. [Working with sequencing reads (FASTQ format)](1_week/docs/fastq_format.pdf)
 10. [Sequencers give pieces to genomic puzzles](1_week/docs/pieces_fragmentary.pdf)
-    * Unrelated humans have genomes of ~3 billion base pairs which are 99.8 - 99.9% similar
 11. [Read alignment and why it's hard](1_week/docs/read_alignment_hard.pdf)
 12. [Naive exact matching](1_week/docs/naive_exact_matching.pdf)
 
