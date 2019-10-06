@@ -69,6 +69,7 @@
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
+* [ERR266411_1.for_asm.fastq](ERR266411_1.for_asm.fastq)
 
 ## Utility Functions
 ```python
