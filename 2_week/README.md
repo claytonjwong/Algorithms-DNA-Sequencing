@@ -101,4 +101,4 @@ def boyer_moore(p, p_bm, t):
 ### Solution 2
 * [.ipynb](2_assignment.ipynb)
 * [.py](2_assignment.py)
-* [.html](2_assignment.html)
+* [.md](2_assignment.md)

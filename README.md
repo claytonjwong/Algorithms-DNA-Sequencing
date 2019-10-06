@@ -21,7 +21,7 @@
 * **1_assignment**
     * [.ipynb](1_week/1_assignment.ipynb)
     * [.py](1_week/1_assignment.py)
-    * [.html](1_week/1_assignment.html)
+    * [.md](1_week/1_assignment.md)
     
 ### Resources
 * [ERR037900_1.first1000.fastq](1_week/ERR037900_1.first1000.fastq)
@@ -45,7 +45,7 @@
 * **2_assignment**
     * [.ipynb](2_week/2_assignment.ipynb)
     * [.py](2_week/2_assignment.py)
-    * [.html](2_week/2_assignment.html)
+    * [.md](2_week/2_assignment.md)
     
 ### Resources
 * [bm_preproc.py](bm_preproc.py)
@@ -67,7 +67,7 @@
 * **3_assignment**
     * [.ipynb](3_week/3_assignment.ipynb)
     * [.py](3_week/3_assignment.py)
-    * [.html](3_week/3_assignment.html)
+    * [.md](3_week/3_assignment.md)
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
