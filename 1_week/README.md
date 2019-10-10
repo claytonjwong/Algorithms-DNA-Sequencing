@@ -64,3 +64,4 @@ Next, download and parse the [lambda virus genome](lambda_virus.fa).
 ### Solution 1
 * [.ipynb](1_assignment.ipynb)
 * [.py](1_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/1_week/1_assignment.ipynb)

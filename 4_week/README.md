@@ -130,3 +130,8 @@ res = greedy_scss(['ABCD', 'CDBC', 'BCDA'], 1)
 print(res)
 print(len(res))
 ```
+
+### Solution 4
+* [.ipynb](4_week/4_assignment.ipynb)
+* [.py](4_week/4_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/4_week/4_assignment.ipynb)

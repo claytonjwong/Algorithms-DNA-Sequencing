@@ -222,3 +222,4 @@ def approximate_match_subseq_index(p, t, k):
 ### Solution 2
 * [.ipynb](2_assignment.ipynb)
 * [.py](2_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/2_week/2_assignment.ipynb)

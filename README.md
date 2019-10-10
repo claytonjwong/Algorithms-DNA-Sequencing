@@ -26,12 +26,11 @@
 11. [Read alignment and why it's hard](1_week/docs/read_alignment_hard.pdf)
 12. [Naive exact matching](1_week/docs/naive_exact_matching.pdf)
 
-### Assignments
-* **1_assignment**
-    * [.ipynb](1_week/1_assignment.ipynb)
-    * [.py](1_week/1_assignment.py)
-    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/1_week/1_assignment.ipynb)
-    
+### Assignment
+* [.ipynb](1_week/1_assignment.ipynb)
+* [.py](1_week/1_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/1_week/1_assignment.ipynb)
+
 ### Resources
 * [ERR037900_1.first1000.fastq](1_week/ERR037900_1.first1000.fastq)
 * [lambda_virus.fa](1_week/lambda_virus.fa)
@@ -50,12 +49,11 @@
 10. [Approximate Matching, Hamming, and Edit Distance](2_week/docs/approximate.pdf)
 11. [Pigeonhole Principle](2_week/docs/pigeonhole.pdf)
 
-### Assignments
-* **2_assignment**
-    * [.ipynb](2_week/2_assignment.ipynb)
-    * [.py](2_week/2_assignment.py)
-    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/2_week/2_assignment.ipynb)
-    
+### Assignment
+* [.ipynb](2_week/2_assignment.ipynb)
+* [.py](2_week/2_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/2_week/2_assignment.ipynb)
+
 ### Resources
 * [bm_preproc.py](bm_preproc.py)
 * [k-mer_index.py](k-mer_index.py)
@@ -72,11 +70,10 @@
 7. [1st and 2nd Laws of Assembly: Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
 8. [Overlap Graph](3_week/docs/overlap_graph.pdf)
 
-### Assignments
-* **3_assignment**
-    * [.ipynb](3_week/3_assignment.ipynb)
-    * [.py](3_week/3_assignment.py)
-    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/3_week/3_assignment.ipynb)
+### Assignment
+* [.ipynb](3_week/3_assignment.ipynb)
+* [.py](3_week/3_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/3_week/3_assignment.ipynb)
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
@@ -96,11 +93,10 @@
 ### Resources
 * [mystery.fq](mystery.fq)
 
-### Assignments
-* **4_assignment**
-    * [.ipynb](4_week/4_assignment.ipynb)
-    * [.py](4_week/4_assignment.py)
-    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/4_week/4_assignment.ipynb)
+### Assignment
+* [.ipynb](4_week/4_assignment.ipynb)
+* [.py](4_week/4_assignment.py)
+* [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/4_week/4_assignment.ipynb)
 
 ## Utility Functions
 ```python
