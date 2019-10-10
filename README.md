@@ -3,6 +3,14 @@
 * [Johns Hopkins University](https://www.jhu.edu/)
 * [langmead-lab.org](http://www.langmead-lab.org/)
 
+## 3 Laws of Assembly
+1. If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
+    * See [Week 3 - Lecture 7](3_week/docs/overlaps_and_coverage.pdf) for details
+2. More coverage leads to more and longer overlaps
+    * See [Week 3 - Lecture 7](3_week/docs/overlaps_and_coverage.pdf) for details
+3. Repeats make assembly difficult
+    * See [Week 4 - Lecture 3](4_week/docs/third_law.pdf) for details 
+
 ## [Week 1: DNA Sequencing, Strings and Matching](1_week)
 ### Lectures
 1. [Introduction](1_week/docs/intro.pdf)
@@ -22,6 +30,7 @@
 * **1_assignment**
     * [.ipynb](1_week/1_assignment.ipynb)
     * [.py](1_week/1_assignment.py)
+    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/1_week/1_assignment.ipynb)
     
 ### Resources
 * [ERR037900_1.first1000.fastq](1_week/ERR037900_1.first1000.fastq)
@@ -45,6 +54,7 @@
 * **2_assignment**
     * [.ipynb](2_week/2_assignment.ipynb)
     * [.py](2_week/2_assignment.py)
+    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/2_week/2_assignment.ipynb)
     
 ### Resources
 * [bm_preproc.py](bm_preproc.py)
@@ -59,17 +69,38 @@
 4. [Edit Distance (part 4)](3_week/docs/edit_dist4.pdf)
 5. [Global and Local Alignment](3_week/docs/global_and_local_alignment.pdf)
 6. [De Novo Shotgun Assembly](3_week/docs/assembly_basics.pdf)
-7. [Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
+7. [1st and 2nd Laws of Assembly: Overlaps and Coverage](3_week/docs/overlaps_and_coverage.pdf)
 8. [Overlap Graph](3_week/docs/overlap_graph.pdf)
 
 ### Assignments
 * **3_assignment**
     * [.ipynb](3_week/3_assignment.ipynb)
     * [.py](3_week/3_assignment.py)
+    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/3_week/3_assignment.ipynb)
 
 ### Resources
 * [chr1.GRCh38.excerpt.fasta](chr1.GRCh38.excerpt.fasta)
 * [ERR266411_1.for_asm.fastq](ERR266411_1.for_asm.fastq)
+
+## [Week 4: Algorithms for Assembly](4_week)
+### Lectures
+1. [Shortest Common Substring](4_week/docs/scss.pdf)
+2. [Greedy Shortest Common Substring](4_week/docs/greedy_scss.pdf)
+3. [3rd Law of Assembly: Repeats are Bad](4_week/docs/third_law.pdf)
+4. [De Bruijn Graphs and Eulerian Walks](4_week/docs/dbg1.pdf)
+5. [When Eulerian Walks Go Wrong](4_week/docs/dbg2.pdf)
+6. [Assemblers in Practice](4_week/docs/assemblers_in_practice.pdf)
+7. [The Future is Long?](4_week/docs/longreads.pdf)
+8. [Wrap Up](4_week/docs/wrap_up.pdf)
+
+### Resources
+* [mystery.fq](mystery.fq)
+
+### Assignments
+* **4_assignment**
+    * [.ipynb](4_week/4_assignment.ipynb)
+    * [.py](4_week/4_assignment.py)
+    * [.html](https://nbviewer.jupyter.org/github/claytonjwong/Algorithms-DNA-Sequencing/blob/master/4_week/4_assignment.ipynb)
 
 ## Utility Functions
 ```python
