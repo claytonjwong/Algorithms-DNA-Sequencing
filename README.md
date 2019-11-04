@@ -158,3 +158,10 @@ to execute then the following error will occur:
 ```
 NameError: name 'get_ipython' is not defined
 ```
+
+## Auxillary
+K-mers are a fundamental concept for creating "words" from a DNA sequencing read.
+These "words" are abstracted to computer science string algorithms (ie. simply finding pattern in text).
+
+For example, a DNA substring consisting of two neucleotides is a 2-mer (regardless of Mr. Schwarzenegger's beliefs):
+![](docs/its_not_a_2mer.png)
