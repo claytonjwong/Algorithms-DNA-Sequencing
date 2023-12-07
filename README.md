@@ -9,7 +9,7 @@
 2. More coverage leads to more and longer overlaps
     * See [Week 3 - Lecture 7](3_week/docs/overlaps_and_coverage.pdf) for details
 3. Repeats make assembly difficult
-    * See [Week 4 - Lecture 3](4_week/docs/third_law.pdf) for details 
+    * See [Week 4 - Lecture 3](4_week/docs/third_law.pdf) for details
 
 ## [Week 1: DNA Sequencing, Strings and Matching](1_week)
 ### Lectures
@@ -143,8 +143,8 @@ $ jupyter notebook 1_notebook.ipynb
 [I 11:45:05.991 NotebookApp] http://localhost:8889/?token=070644d6de70204df12235b2356476b577d0744b5df41422
 [I 11:45:05.991 NotebookApp]  or http://127.0.0.1:8889/?token=070644d6de70204df12235b2356476b577d0744b5df41422
 [I 11:45:05.991 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 11:45:05.998 NotebookApp] 
-    
+
+[C 11:45:05.998 NotebookApp]
     To access the notebook, open this file in a browser:
         file:///Users/.../Library/Jupyter/runtime/nbserver-38748-open.html
     Or copy and paste one of these URLs:
@@ -154,7 +154,7 @@ $ jupyter notebook 1_notebook.ipynb
 
 * The Python file for each Jupyter Notebook can be executed using ```ipython```.  If ```python``` is used
 to execute then the following error will occur:
- 
+
 ```
 NameError: name 'get_ipython' is not defined
 ```
