@@ -3,6 +3,10 @@
 * [Johns Hopkins University](https://www.jhu.edu/)
 * [langmead-lab.org](http://www.langmead-lab.org/)
 
+## Introduction
+
+Introduction.md
+
 ## 3 Laws of Assembly
 1. If the suffix of read A is similar to the prefix of read B then A and B might overlap in the genome
     * See [Week 3 - Lecture 7](3_week/docs/overlaps_and_coverage.pdf) for details
